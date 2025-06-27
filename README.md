@@ -22,4 +22,6 @@
 - stripe success & cancel url
 
   ## API End-Point
-
+- Admin panel
+- email: admin@gmail.com , Pass : 123
+- http://localhost:8000/admin (admin api)  
