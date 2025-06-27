@@ -32,4 +32,13 @@
 - http://localhost:8000/myapp/reset/<uidb64>/<token>/ ( password reset token )
 - http://localhost:8000/myapp/reset/done/  (Reset Completed )
 - http://localhost:8000/product/products/  ( show all products)
-- http://localhost:8000/product/products/ 
+- http://127.0.0.1:8000/product/products/?category=2  (Filter Categories )
+- http://127.0.0.1:8000/product/products/?search=shirt  (search by keyword )
+- http://127.0.0.1:8000/product/products/?ordering=-price&search=s ( ascending order by price )
+- http://127.0.0.1:8000/product/products/?ordering=-name&search=s   (descending order by name )
+- http://127.0.0.1:8000/product/categories/ ( show all categories with id )
+- http://127.0.0.1:8000/stripe/payment/  ( payment checkout api by STRIPE )
+- http://127.0.0.1:8000/striped/api/cancel/ ( payment Cancel api )
+- http://127.0.0.1:8000/striped/api/success/ (Payment success api ) 
+ - 
+
