@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from .models import User,Profile
+from .models import User,Profile, ImageUploadCloudinary
 
 admin.site.register(Profile)
+admin.site.register(ImageUploadCloudinary)
 class UserAdmin(BaseUserAdmin):
     ordering = ['email']
     list_display = ['email', 'is_staff', 'is_superuser']

@@ -41,3 +41,10 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.email
+    
+class ImageUploadCloudinary(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='uploads/')  
+
+    def __str__(self):
+        return self.title

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Profile, User
+from .models import Profile, User , ImageUploadCloudinary
 
 class ProfileSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(source='user.email', read_only=True)
@@ -9,12 +9,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-# from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
-# class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
-#     @classmethod
-#     def get_token(cls, user):
-#         token = super().get_token(user)
-#         # Optional: add custom claims
-#         token['email'] = user.email
-#         return token
+class ImageUploadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ImageUploadCloudinary
+        fields = '__all__'

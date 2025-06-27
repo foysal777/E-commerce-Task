@@ -1,4 +1,4 @@
-
+import os
 import environ
 env = environ.Env()
 environ.Env.read_env()
@@ -34,10 +34,20 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'django_filters',
-    'striped' 
+    'striped' ,
+    'cloudinary',
+    'cloudinary_storage',
    
     
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dbd5yj7or',
+    'API_KEY': env('API_KEY'),
+    'API_SECRET': env('API_SECRET'),
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 AUTH_USER_MODEL = 'myapp.User'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  
 DEFAULT_FROM_EMAIL = 'webmaster@localhost'
