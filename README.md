@@ -24,4 +24,12 @@
   ## API End-Point
 - Admin panel
 - email: admin@gmail.com , Pass : 123
-- http://localhost:8000/admin (admin api)  
+- http://localhost:8000/admin (Admin api)
+- http://localhost:8000/myappp/profile (Authenticated profile Details )
+- http://localhost:8000/myapp/token/   ( Access & Refresh Token )
+- http://localhost:8000/myapp/token/refresh ( Refresh Token )
+- http://localhost:8000/myapp/password-reset/  ( Password reset api)
+- http://localhost:8000/myapp/reset/<uidb64>/<token>/ ( password reset token )
+- http://localhost:8000/myapp/reset/done/  (Reset Completed )
+- http://localhost:8000/product/products/  ( show all products)
+- http://localhost:8000/product/products/ 
