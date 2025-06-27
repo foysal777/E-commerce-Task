@@ -40,5 +40,5 @@
 - http://127.0.0.1:8000/stripe/payment/  ( payment checkout api by STRIPE )
 - http://127.0.0.1:8000/striped/api/cancel/ ( payment Cancel api )
 - http://127.0.0.1:8000/striped/api/success/ (Payment success api ) 
- - 
+- http://127.0.0.1:8000/myapp/upload  (Cloudinary Image api )
 
