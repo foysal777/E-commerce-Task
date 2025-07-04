@@ -15,6 +15,13 @@ def ProfileView(request):
     return Response(serializer.data)
 
 
+def current_user(request):
+    user = request.user
+    return Response({
+        
+        'username' : user.username,
+        'email' : user.email
+    })
 class ImageUploadView(APIView):
     parser_classes = [MultiPartParser, FormParser]
 
