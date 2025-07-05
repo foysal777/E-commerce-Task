@@ -37,6 +37,8 @@ class Profile(models.Model):
     first_name= models.CharField(max_length=100, blank=True)
     last_name= models.CharField(max_length=100, blank=True)
     bio = models.CharField(max_length=100 , blank=True )
+    stripe_session_id = models.CharField(null= True, blank=True , max_length=100)
+    is_paid = models.BooleanField(default=False)
     
 
     def __str__(self):

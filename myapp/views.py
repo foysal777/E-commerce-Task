@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from .serializers import ProfileSerializer,ImageUploadSerializer
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework import status
-
+from rest_framework.decorators import api_view, permission_classes
 
 @api_view(['GET'])
 def ProfileView(request):
@@ -31,3 +31,7 @@ class ImageUploadView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    
+    
+
